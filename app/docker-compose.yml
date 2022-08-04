@@ -1,0 +1,13 @@
+version: "3.3"
+networks:
+  ambiente:
+    external: true
+services:
+  apache_php8:
+    image: img_app_dio:v1.0
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+    networks: 
+      - ambiente
